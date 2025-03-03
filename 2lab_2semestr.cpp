@@ -45,4 +45,22 @@ public:
 
 
 
-    
+class Review {
+private:
+    string nameDelishes;
+    int rating;
+    string comments;
+
+public:
+    Review() : nameDelishes(""), rating(5), comments("") {};
+    Review(string n, int r) : nameDelishes(n), rating(r), comments("") {};
+    Review(string n, int r, string comment) : nameDelishes(n), rating(r), comments(comment) {};
+
+    void displayReview() {
+        cout << "Страву " << nameDelishes << " оцінено на " << rating << " з коментарем: " << comments << endl;
+    }
+
+    ~Review() {
+        cout << "Видалено відгук для страви: " << nameDelishes << endl;
+    };
+};
