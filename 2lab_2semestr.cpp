@@ -24,3 +24,25 @@ public:
     };
 };
 
+class Reservation {
+private:
+    string nameClient;
+    string timeReserv;
+    int table;
+public:
+    Reservation() : nameClient(""), timeReserv(""), table(-1) {};
+    Reservation(string name) : nameClient(name) {};
+    Reservation(string name, string time) : nameClient(name), timeReserv(time), table(-1) {};
+    Reservation(string n, string time, int table) : nameClient(n), timeReserv(time), table(table) {}
+
+    void diplayReserv() {
+        cout << "Cтолик №" << table << " зарезерований на " << nameClient << " на " << timeReserv << endl;
+    }
+    ~Reservation() {
+        cout << "Видалено бронювання для: " << nameClient << endl;
+    };
+};
+
+
+
+    
