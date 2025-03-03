@@ -64,3 +64,27 @@ public:
         cout << "Видалено відгук для страви: " << nameDelishes << endl;
     };
 };
+
+int main() {
+    SetConsoleOutputCP(CP_UTF8);
+
+    Menu grechka("М'ясо", 5);
+    Menu kartoha("Картопля", 20, "20 хвилин");
+
+    Reservation reserv1("Олег", "16:00");
+    Reservation reserv2("Максим", "12:00", 10);
+
+    Review review1("Картопля", 5, "Все супер");
+    Review review2("Борщ", 1, "Не сподобалось");
+
+    grechka.displayInfo();
+    kartoha.displayInfo();
+
+    reserv1.diplayReserv();
+    reserv2.diplayReserv();
+
+    review1.displayReview();
+    review2.displayReview();
+
+    return 0;
+}
